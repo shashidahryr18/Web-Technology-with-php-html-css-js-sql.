@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test Page</title>
+    </head>
+    <body>
+        <script>
+            const a = [1,3,15,-1,0];
+            let d = (i)=>{console.log(i*5);}
+            a.forEach(d);
+
+            let newA = a.map((i)=>{return i*10;});
+            console.log(newA);  
+
+            let sum = 0;
+            sum = a.reduce((sum,val)=>{return sum += val; });
+
+            let max = a.reduce((max,val)=>{return max>val? max : val; });
+
+            let newA1 = a.filter((i)=>{return i>2;});
+            console.log(newA1);
+
+             </script>
+    </body>
+</html>

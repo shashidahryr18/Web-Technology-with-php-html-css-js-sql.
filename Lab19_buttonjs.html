@@ -1,0 +1,41 @@
+<html>
+    <style>
+        button{width: 100px; height: 100px; border:solid 1px rgb(94, 255, 2);
+        border-radius:15px;}
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(this).css("background-color", "pink");
+                $(this).prop("disabled",true);
+            }
+           );});
+    </script>
+    <body>
+        <!-- table>tr*3>td*3>button#id-$-->
+        <table>
+            <tr>
+                <td><button id = "id-1">S</button></td>
+                <td><button id = "id-2">H</button></td>
+                <td><button id = "id-3">A</button></td>
+                <td><button id = "id-4">S</button></td>
+                <td><button id = "id-5">H</button></td>
+                <td><button id = "id-6">I</button></td>
+                <td><button id = "id-7">D</button></td>
+                <td><button id = "id-8">H</button></td>
+                <td><button id = "id-9">A</button></td>
+                <td><button id = "id-10">R</button></td>
+
+            </tr>
+            <tr>
+                <td><button id = "id-10">G</button></td>
+                <td><button id = "id-11">O</button></td>
+                <td><button id = "id-12">W</button></td>
+                <td><button id = "id-13">D</button></td>
+                <td><button id = "id-14">A</button></td>
+                
+        </table>
+
+    </body>
+</html>

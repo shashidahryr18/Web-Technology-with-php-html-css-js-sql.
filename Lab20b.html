@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <script src="jquery.js"></script>
+<script>
+    $(function(){
+        let flag = 0;
+        $("button").click(function(){
+            const pattern = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]];
+
+            let currentPlayer = flag == 0 ? "player1" : "player2";
+            $(this).prop("disabled", true).addClass(currentPlayer);
+            flag = flag == 0 ? 1 : 0;
+
+            for(let i of pattern)
+            {
+                let a = $("#id-"+i[0]).hasClass(currentPlayer);
+                let b = $("#id-"+i[1]).hasClass(currentPlayer);
+                let c = $("#id-"+i[2]).hasClass(currentPlayer);
+
+                if(a && b && c)
+                {
+                    alert(`${currentPlayer} Win!!! Game is Over.`);
+                    $("button").prop("disabled", false);
+                    $("button").removeClass("player1");
+                    $("button").removeClass("player2");
+                    return;
+                }
+            }
+        });
+    });
+</script>
+
+<style>
+    button.player1 { background-color: green; }
+    button.player2 { background-color: blue; }
+    button {
+        width: 100px;
+        height: 100px;
+        background-color: #ccc;
+        border-radius: 15px;
+        border: 1px solid black;
+    }
+</style>
+    <style>
+        button.player1{
+            background-color:rgb(26, 3, 94);
+        }
+        button.player2{
+            background-color:rgb(163, 207, 152);
+        }
+        button{
+            width:100px; 
+            height:50px;
+            background-color:rgb(211, 225, 181);
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+    <body>
+        <table>
+                <tr>
+                <td><button id = "id-6">1</button></td>
+                <td><button id = "id-5">2</button></td>
+                <td><button id = "id-6">3</button></td>
+                </tr>
+                <tr>
+                <td><button id = "id-8">4</button></td>
+                <td><button id = "id-5">5</button></td>
+                <td><button id = "id-6">6</button></td>
+                </tr>
+                <tr>
+                <td><button id = "id-7">7</button></td>
+                <td><button id = "id-8">8</button></td>
+                <td><button id = "id-9">9</button></td>
+                </tr>
+                <tr>
+                <td><button id = "id-10">Reset Game</button></td>
+                </tr>
+        </table>
+                       
+    </body>
+</html>

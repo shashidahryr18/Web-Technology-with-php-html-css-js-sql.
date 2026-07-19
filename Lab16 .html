@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Result</title>
+ <style>
+   body {
+   font-family: sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   background-color: #f0f2f5;
+ }
+ .result-card {
+   background: white;
+   padding: 2rem;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ }
+</style>
+</head>
+ <body>
+      <div class="result-card">
+    <h1 id="display-sum">Calculating...</h1>
+ </div>
+ <script>
+         const x = [1, 2, 3];
+         let sum = 0;
+         for(let val of x) {
+         sum += val;
+ }
+        // This displays the sum on the webpage
+        document.getElementById('display-sum').innerText = "The sum is: " + sum;
+        // This still logs it to the background console
+        console.log("Sum:", sum);
+ </script>
+</body>
+</html>

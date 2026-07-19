@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            let flag=0;
+            $("button").click(function(){
+               let currentplayer = flag == 0? "player1":"player2";
+                $(this).prop("disabled", true).addClass(currentplayer);
+                flag = flag == 0 ? 1:0;
+            });
+        })
+    </script>
+    <style>
+        button.player1{
+            background-color:rgb(220, 146, 129);
+        }
+        button.player2{
+            background-color:rgb(49, 219, 6);
+        }
+        button{
+            width:100px; 
+            height:50px;
+            background-color:rgb(206, 178, 92);
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+    </style>
+    <body>
+        <table>
+                <tr>
+                <td><button id = "id-6">S</button></td>
+                <td><button id = "id-5">H</button></td>
+                <td><button id = "id-6">a</button></td>
+                </tr>
+                <tr>
+                <td><button id = "id-8">s</button></td>
+                <td><button id = "id-5">H</button></td>
+                <td><button id = "id-6">I</button></td>
+                </tr>
+                <tr>
+                <td><button id = "id-7">0</button></td>
+                <td><button id = "id-8">8</button></td>
+                <td><button id = "id-9">6</button></td>
+                </tr>
+        </table>
+                       
+    </body>
+</html>

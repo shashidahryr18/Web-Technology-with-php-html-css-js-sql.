@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loop for array</title>
+</head>
+<body>
+<script>
+const x = [1, 2, 3];
+for (let j = 0; j < x.length; j++) {
+  console.log(`value at index ${j} is ${x[j]}`);
+}
+for (let val of x) {
+  console.log(`value is ${val}`);
+}
+for (let key in x) {
+  console.log(`Key is ${key}`);
+}
+</script>
+</body>
+</html>

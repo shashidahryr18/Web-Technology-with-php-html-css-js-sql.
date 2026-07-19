@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id = "id_msg"> Welcome, Guest!! </h1>
+    <button id = "id_button"> Change Name </button>
+    <script>
+        const h1 = document.getElementById ("id_msg"); 
+        const b = document.getElementById ("id_button");
+
+        let fv = () => {
+            const proceed = confirm ("Do you want to proceed?"); // In "alert" function we don't have ok/cancel, in "confirm" we do have that
+            
+            if (confirm) {
+                const user = prompt ("Enter New Username:", "username");
+                if (user.length != 0) {
+                    h1.textContent = "Welcome, " + user;
+                    h1.style.color = "blue";
+                } else {
+                    h1.textContent = "Try Again";
+                    h1.style.color = "red";
+                }
+            }
+        };
+
+        b.addEventListener ("click", fv);
+    </script>
+</body>
+
+</html>

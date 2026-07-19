@@ -1,0 +1,91 @@
+<html>
+<head>
+<script src="jquery.js"></script>
+
+<script>
+$(function() {
+    let flag = 0; // 0 = player1, 1 = player2
+
+    let wpattern = [
+        [1,2,3],[4,5,6],[7,8,9],
+        [1,4,7],[2,5,8],[3,6,9],
+        [1,5,9],[3,5,7]
+    ];
+
+    $("button").click(function() {
+
+        let currentPlayer = (flag == 0) ? "player1" : "player2";
+
+        $(this).prop("disabled", true).addClass(currentPlayer);
+
+        for(let i of wpattern) {
+            let a = $("#id-"+i[0]).hasClass(currentPlayer);
+            let b = $("#id-"+i[1]).hasClass(currentPlayer);
+            let c = $("#id-"+i[2]).hasClass(currentPlayer);
+
+            if(a && b && c) {
+                $("#result").text(currentPlayer + " Wins!");
+                $("button").prop("disabled", true); // stop game
+                return;
+            }
+        }
+
+        flag = (flag == 0) ? 1 : 0;
+    });
+
+    $("#reset").click(function(){
+        $("button").prop("disabled", false)
+                   .removeClass("player1 player2");
+        $("#result").text("");
+        flag = 0;
+    });
+});
+</script>
+
+<style>
+button.player1 {
+    background-color: cyan;
+}
+button.player2 {
+    background-color: grey;
+}
+button {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    border-radius: 15px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h2 id="result"></h2>
+
+<table>
+<tr>
+<td><button id="id-1">1</button></td>
+<td><button id="id-2">2</button></td>
+<td><button id="id-3">3</button></td>
+</tr>
+
+<tr>
+<td><button id="id-4">4</button></td>
+<td><button id="id-5">5</button></td>
+<td><button id="id-6">6</button></td>
+</tr>
+
+<tr>
+<td><button id="id-7">7</button></td>
+<td><button id="id-8">8</button></td>
+<td><button id="id-9">9</button></td>
+</tr>
+</table>
+
+<br>
+<button id="reset">Reset Game</button>
+
+</body>
+</html>
