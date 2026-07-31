@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Three Rectangles Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff94d8, #f789be);
+            overflow: hidden;
+        }
+        .rectangle {
+            width: 200px;
+            height: 80px;
+            position: absolute;
+            right: -220px;
+            border-radius: 12px;
+            animation: move 5s linear infinite;
+        }
+        .rect1 {
+            top: 70px;
+            background: #767cbc;
+            animation-delay: 5;
+        }
+        .rect2 {
+            top: 300px;
+            background: #feffff;
+            animation-delay: 2s;
+        }
+        .rect3 {
+            top: 450px;
+            background: #6aff00;
+            animation-delay: 3s;
+        }
+        @keyframes move {
+            0% { right: -220px}
+            50% { right: 100%;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="rectangle rect3"></div>
+<div class="rectangle rect2"></div>
+<div class="rectangle rect1"></div>
+
+</body>
+</html>

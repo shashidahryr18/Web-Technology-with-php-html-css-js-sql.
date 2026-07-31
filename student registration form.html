@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #e7cfc8;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            padding: 5px;
+            margin-top: 10px;
+        }
+        .row {
+            margin-bottom: 10px;
+        }
+        .small-input {
+            width: 70px;
+        }
+        .name-input {
+            width: 140px;
+        }
+        textarea {
+            width: 300px;
+            height: 80px;
+        }
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form>
+        <div class="row">
+            <label>Roll no. :</label>
+            <input type="text">
+        </div>
+
+        <div class="row">
+            <label>Student name :</label>
+            <input type="text" class="name-input" placeholder="First Name">
+            <input type="text" class="name-input" placeholder="Last Name">
+        </div>
+
+        <div class="row">
+            <label>Father's name :</label>
+            <input type="text">
+        </div>
+
+        <div class="row">
+            <label>Date of birth :</label>
+            
+            <input type="date" class="small-input" placeholder="Day">
+            <input type="month" class="small-input" placeholder="Month">
+            <input type="Year" class="small-input" placeholder="Year">
+        </div>
+
+        <div class="row">
+            <label>Mobile no. :</label>
+            +91 <input type="text">
+        </div>
+
+        <div class="row">
+            <label>Email id :</label>
+            <input type="email">
+        </div>
+
+        <div class="row">
+            <label>Password :</label>
+            <input type="password">
+        </div>
+
+        <div class="row">
+            <label>Gender :</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+        </div>
+
+        <div class="row">
+            <label>Department :</label>
+            <input type="checkbox"> CSE
+            <input type="checkbox"> IT
+            <input type="checkbox"> ECE
+            <input type="checkbox"> Civil
+            <input type="checkbox"> Mech
+        </div>
+
+        <div class="row">
+            <label>Course :</label>
+            <select>
+                <option>---------------- Select Current Course ----------------</option>
+                <option>B.Tech</option>
+                <option>BCA</option>
+                <option>MCA</option>
+                <option>M.Tech</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label>Student photo :</label>
+            <input type="file">
+        </div>
+
+        <div class="row">
+            <label>City :</label>
+            <input type="text">
+        </div>
+
+        <div class="row">
+            <label>Address :</label>
+            <textarea></textarea>
+        </div>
+
+        <button class="btn">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
